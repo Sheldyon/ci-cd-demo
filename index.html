@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Demo</title>
+    <style>
+        body { font-family: Arial; padding: 40px; text-align: center; }
+        input, button { padding: 10px; margin: 5px; }
+        #message { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form id="testForm">
+        <input type="text" id="name" placeholder="Ваше имя" value="Тест">
+        <input type="email" id="email" placeholder="Email" value="test@example.com">
+        <button type="submit" id="submitBtn">Отправить</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('message').innerText = 'Спасибо, форма отправлена!';
+        });
+    </script>
+</body>
+</html>
